@@ -502,7 +502,7 @@ export default function LotteryXO() {
                                     onClick={() => dismissDisclaimer(true)}
                                     style={{ width: "100%", padding: "12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.1)", cursor: "pointer", fontWeight: 600, fontSize: 13, background: "transparent", color: "#718096" }}
                                 >
-                                    รับทราบแล้ว ไม่ต้องแสดงวันนี้
+                                    รับทราบแล้ว ไม่ต้องแสดงวันนี้แล้ว
                                 </button>
                             </div>
                         </div>
