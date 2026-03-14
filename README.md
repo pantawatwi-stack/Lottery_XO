@@ -1,16 +1,31 @@
-# React + Vite
+# ระบบ วิเคราะห์หวยแบบใช้ตาราง XO ที่อิงกับสถิติเลขที่ออก
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ประโยชน์และความน่าสนใจของโปรเจกต์เว็บวิเคราะห์หวยแบบตาราง XO
+•	ระบบเก็บสถิติเลขที่ออกย้อนหลัง
+ให้ผู้ใช้สามารถดูข้อมูลเลขที่ออกย้อนหลังและนำมาใช้วิเคราะห์
+•	สร้างตาราง XO อัตโนมัติจากสถิติเลขออก
+ระบบช่วยจัดเรียงเลขในตาราง 3x3 (หรือขนาดอื่น ๆ) ตามสถิติที่มี
+•	วิเคราะห์และแนะนำเลขเด่น เลขวิ่ง หรือเลขชุดที่น่าจะออก
+เช่น เลขที่ออกบ่อยในตำแหน่งต่าง ๆ ของตาราง
+•	มีฟังก์ชันสูตรเดินเลข หรือสูตรคำนวณเลขเพิ่มเติม
+ให้ผู้ใช้ทดลองสูตรต่าง ๆ ได้ในเว็บ
+•	แสดงผลเป็นกราฟหรือไดอะแกรมง่ายต่อการเข้าใจ
+เช่น แสดงแนวโน้มเลขที่ออกในตำแหน่งต่าง ๆ
+•	มีระบบบันทึกสูตรหรือการวิเคราะห์ของผู้ใช้
+ให้ผู้ใช้เก็บข้อมูลและปรับสูตรวิเคราะห์ตามที่ต้องการ
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+เทคโนโลยีที่แนะนำใช้ทำเว็บนี้
+•	Frontend: HTML, CSS, JavaScript (อาจใช้ React หรือ Vue.js เพื่อทำ UI ที่ตอบสนองดี)
+•	Backend: PHP, Python (Flask/Django), Node.js หรืออื่น ๆ สำหรับเก็บและประมวลผลสถิติ
+•	ฐานข้อมูล: MySQL, PostgreSQL หรือ MongoDB สำหรับเก็บสถิติเลขและข้อมูลผู้ใช้
+•	Data Visualization: Chart.js, D3.js หรือ Google Charts สำหรับแสดงกราฟและไดอะแกรม
+________________________________________
+ขั้นตอนคร่าว ๆ ในการทำโปรเจกต์
+1.	เก็บข้อมูลเลขหวยที่ออกย้อนหลัง (สามารถดึงข้อมูลจากเว็บหวยรัฐบาล หรือป้อนด้วยมือ)
+2.	ออกแบบฐานข้อมูลเพื่อเก็บเลขและสถิติ
+3.	เขียนฟังก์ชันสร้างตาราง XO อัตโนมัติจากเลขในฐานข้อมูล
+4.	สร้างฟังก์ชันวิเคราะห์เลขเด่นโดยจับคู่เลขในแนวต่าง ๆ
+5.	สร้าง UI ให้ผู้ใช้สามารถดูผล วิเคราะห์ และทดลองสูตรเดินเลข
+6.	เพิ่มฟีเจอร์บันทึกผลวิเคราะห์ และแชร์ผลลัพธ์
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
